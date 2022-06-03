@@ -714,18 +714,46 @@ input {
   background-color: var(--input-color);
   padding: .5rem;
   display: flex;
+  flex-direction: column;
+  row-gap: 20px;
   justify-content: space-between;
 }
 
 .subscribe__input {
-  width: 70%;
-  padding-right: .5rem;
-  background-color: var(--input-color);
-  color: var(--text-color);
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--first-color);
+  color: #fff;
+  border-radius: .5rem;
+}
+
+body.dark-theme .subscribe__input{
+  background-color: var(--white-color);
+  color: #000;
 }
 
 .subscribe__input::placeholder {
-  color: var(--text-color);
+  color: #fff;
+}
+
+body.dark-theme .subscribe__input::placeholder{
+  color: #000;
+}
+
+.pesan{
+  height: 150px;
+  outline: none;
+}
+
+.link{
+  text-decoration: none;
+  color: #FFF;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.link:hover{
+  color: #0f72e5;
 }
 
 /*=============== SPONSORS ===============*/
@@ -885,7 +913,7 @@ body.dark-theme .footer{
     grid-template-columns: repeat(3, max-content);
   }
   .subscribe__form {
-    width: 470px;
+    width: 600px;
     margin: 0 auto;
   }
 }
@@ -996,7 +1024,7 @@ body.dark-theme .footer{
     padding: 3.5rem 0;
   }
   .subscribe__input {
-    padding: 0 .5rem;
+    padding: 10px 20px;
   }
   .footer__rights {
     flex-direction: row;
